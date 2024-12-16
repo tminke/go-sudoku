@@ -56,9 +56,9 @@ func NewGridFromCsv(csvFile string) (*Grid, error) {
 // Grid suitable for display.
 func (g *Grid) String() string {
 
-	// Constant Unicode Grid Border / Separators
-	resetColor := "\033[0m"
-	borderColor := "\033[34m" // Blue
+	// Constant Unicode "Box Drawing" Grid Border / Separators
+	resetColor := "\033[0m"   // Reset ANSI Escape Code
+	borderColor := "\033[34m" // Blue ANSI Escape Code
 	topBorder := borderColor + "\u250F\u2501\u2501\u2501\u252F\u2501\u2501\u2501\u252F\u2501\u2501\u2501\u2533\u2501\u2501\u2501\u252F\u2501\u2501\u2501\u252F\u2501\u2501\u2501\u2533\u2501\u2501\u2501\u252F\u2501\u2501\u2501\u252F\u2501\u2501\u2501\u2513\n" + resetColor
 	btmBorder := borderColor + "\u2517\u2501\u2501\u2501\u2537\u2501\u2501\u2501\u2537\u2501\u2501\u2501\u253B\u2501\u2501\u2501\u2537\u2501\u2501\u2501\u2537\u2501\u2501\u2501\u253B\u2501\u2501\u2501\u2537\u2501\u2501\u2501\u2537\u2501\u2501\u2501\u251B\n" + resetColor
 	lightSeparator := borderColor + "\u2520\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2542\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2542\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2528\n" + resetColor
