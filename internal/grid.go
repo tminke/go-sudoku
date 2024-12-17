@@ -9,8 +9,8 @@ import (
 // the known and possible values for each cell.  It is accessed by
 // Grid[row][col] coordinates.
 type Grid struct {
-	cells [9][9]*Cell
-	mutex sync.RWMutex
+	cells [9][9]*Cell  // The set of Cells in the 9x9 Sudoku board.
+	mutex sync.RWMutex // Protect for potential parallel access.
 }
 
 // NewGrid returns an initialized Grid with all Cells unkown, suitable to

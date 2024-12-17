@@ -7,9 +7,9 @@ import (
 
 // Cell maintains the current state of an individual Cell on the Sudoko board.
 type Cell struct {
-	value    int
-	possible [9]bool
-	mutex    sync.RWMutex
+	value    int          // The known value of the Cell (0 indicates unknown)
+	possible [9]bool      // Values still possible for this Cell
+	mutex    sync.RWMutex // Protect for potential parallel access
 }
 
 // NewCell returns an initialized Cell where all values are still possible.

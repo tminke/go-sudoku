@@ -5,12 +5,12 @@
 Just a toy project to scratch the frustrating Sudoku itch ; )
 
 As a software engineer I inherently, and seemingly incorrectly, feel as though I ought to be good at solving Sudoku puzzles.
-Whenever frustrated by them I always resort to the sentiment... "__I'll just write a program to solve them all!__".
+Whenever frustrated by them I always resort to the sentiment... "_I'll just write a program to solve them all!_".
 So, I finally got off my duff and did just that.
 
 This is just a simplistic approach which was created from scratch, without researching optimal solutions as that would
-have taken away the fun!  It should solve all deteministic "__expert__" / "__master__" level problems, but is not able to
-solve "__extreme__" puzzles which require "__best guess__" style branching.   Maybe in version 2 ; )
+have taken away the fun!  It should solve all deteministic "_expert_" / "_master_" level problems, but is not able to
+solve "_extreme_" puzzles which require "_best guess_" style branching.   Maybe in version 2 ; )
 
 
 ## Usage
@@ -51,10 +51,10 @@ To run the unit tests and view coverage use the following...
 ```bash
 go test -race -coverprofile=coverage.out ./...
 go tool cover -func=coverage.out
-rm coverage.out
 ```
 
 ## Future Enhancements
-- Actually research optimal solutions and make enhancements.
-- Solve "__extreme__" puzzles by making "__best guess__" choices and verify validity.
+- Optimize portions of the algorithm with parallel routines (hence the mutexes).
+- Research optimal solutions and make enhancements.
+- Solve "_extreme_" puzzles by making "_best guess_" choices and verify validity.
 - Generate new puzzles.
